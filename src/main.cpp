@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "../include/helper.hpp"
 
 static struct libinput_interface interface = {
@@ -35,6 +36,7 @@ int main() {
             }
             libinput_event_destroy(event);
         }
+        usleep(1000);
     }
 
     // Destroy the libinput context
